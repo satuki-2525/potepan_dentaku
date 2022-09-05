@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <table class="dentaku">
+        <tr>
+            <td colspan="4" id="result">0</td>
+        </tr>
+
+        <tr>
+            <td class="dentaku_b">
+                <button class="button" onclick="clickbutton(this)">7</button>
+            </td>
+            <td class="dentaku_b">
+                <button class="button" onclick="clickbutton(this)">8</button>
+            </td>
+            <td class="dentaku_b">
+                <button class="button" onclick="clickbutton(this)">9</button>
+                <td class="dentaku_b">
+                    <button class="button" onclick="clickbutton(this)">+</button>
+                </td>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="dentaku_b">
+                <button class="button" onclick="clickbutton(this)">4</button>
+            </td>
+            <td class="dentaku_b">
+                <button class="button" onclick="clickbutton(this)">5</button>
+            </td>
+            <td class="dentaku_b">
+                <button class="button" onclick="clickbutton(this)">6</button>
+            </td>
+            <td class="dentaku_b">
+                <button class="button" onclick="clickbutton(this)">-</button>
+            </td>
+
+        </tr>
+            
+        <tr>
+            <td class="dentaku_b">
+                <button class="button" onclick="clickbutton(this)">1</button>
+            </td>
+            <td class="dentaku_b">
+                <button class="button" onclick="clickbutton(this)">2</button>
+            </td>
+            <td class="dentaku_b">
+                <button class="button" onclick="clickbutton(this)">3</button>
+            </td>
+            <td class="dentaku_b">
+                <button class="button" onclick="clickbutton(this)">*</button>
+            </td>
+
+            <tr>
+  <td class="dentaku_b">
+                <button class="button" onclick="clickbutton(this)">0</button>
+            </td>
+            <td class="dentaku_b">
+                <button class="button" onclick="clickbutton(this)">00</button>
+            </td>
+            <td class="dentaku_b">
+                <button class="button" onclick="clickbutton(this)">.</button>
+        </td>
+        <td class="dentaku_b">
+            <button class="button" onclick="clickbutton(this)">/</button>
+        </td>  
+            </tr>
+        <tr>
+            <td colspan="2">
+                <button class="button" onclick="clickbutton(this)">AC</button>
+            </td>
+            <td colspan="2">
+                <button class="button" onclick="clickbutton(this)">=</button>
+            </td>
+        </tr>
+    </tr>
+    </table>
+
+</body>
+    
+<style>
+    #result{
+        background-color: rgb(51, 124, 152);
+        color: seashell;
+        font-size: 35px;
+        padding-right: 10px;
+        text-align: right;
+        
+    }
+
+    .dentaku{
+        width: 600px;
+        margin: 60px;
+    }
+
+    .dentaku_b{
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+
+    .button{
+        width: 100%;
+        height: 100%;
+        font-size: 30px;
+    }
+
+    </style>
+
+    <script>
+        function clickbutton(target){
+            let rsult = document.getElementById("result");
+            let target_value = target.innerHTML;
+
+            if(target_value == "AC"){
+                result.innerHTML = "0";
+            } else if(target_value == "="){
+                result.innerHTML = eval(result.innerHTML);
+            } else {
+                if(result.innerHTML == "0"){
+                    result.innerHTML = target_value;
+                } else {
+                result.innerHTML += target_value;
+            }
+        }
+
+     }
+        </script>
+    </html>
